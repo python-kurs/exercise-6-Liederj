@@ -4,6 +4,8 @@ from pathlib import Path
 input_dir  = Path("data")
 
 # 1. Read the Scene that you downloaded from the data directory using SatPy. [2P]
+files = find_files_and_readers(base_dir = input_dir, reader = "seviri_l1b_nc")
+scn = Scene(filenames = files)
 
 # 2. Load the composites "natural_color" and "convection" [2P]
 
